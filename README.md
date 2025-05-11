@@ -3,6 +3,8 @@
 The objective of this project is to automate the extraction and structuring of vape product data from two e-commerce websites. The focus is on 
 transforming unstructured product descriptions into a structured schema suitable for data analysis, product comparison, or downstream  applications.
 
+---
+
 ##  Approach
 
 ### 1. Web Scraping using Selenium
@@ -20,6 +22,7 @@ transforming unstructured product descriptions into a structured schema suitable
   e. Image URL
 
   The extracted information are stored in CSV format for subsequent processing. (vaperanger.csv and vagewholesaleusa.csv)
+  
 
   ### 2. Feature Extraction using a Large Language Model (LLM)
      
@@ -33,4 +36,74 @@ transforming unstructured product descriptions into a structured schema suitable
 
   d. Iterating through the product descriptions and applying the LLM pipeline to extract structured outputs, which were saved as a JSON file.
 
-The extracted product features are stored in the structured_output.json file present in the repository.
+The extracted product features are stored in the 'structured_output.json' file present in the repository.
+
+
+---
+## Prerequisites
+
+- Python 3.9 or higher
+  
+- [Create Groq API Key]( https://console.groq.com/keys)
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the Repository
+
+```
+git clone https://github.com/prabal-k/WebScrapping_Feature_extraction
+```
+
+### 2. Open with VsCode and Create, Activate a Python Virtual Environment
+
+### On Windows:
+```
+python -m venv venv
+
+venv\Scripts\activate
+```
+### On Linux/macOS:
+```
+python3 -m venv venv
+
+source venv/bin/activate
+```
+### 3. Install Required Dependencies
+``
+pip install -r requirements.txt
+``
+### 4. Configure Environment Variables
+
+Create a .env file in the root folder with the following content:
+
+GROQ_API_KEY = "your_groq_api_key_here"
+
+### 5. Run the Script 
+
+#### (Optional) A. Web Scraping and CSV Conversion
+
+Note: The CSV files generated from the scraping process are already included in the repository. Running these scripts is optional unless updated data is required.
+
+Scrapping the website : https://vaperanger.com/
+
+```
+python scrapper_vaperanger.py
+
+```
+
+Scrapping the website : https://vapewholesaleusa.com/
+
+```
+python scrapper_vapewholesaleausa.py
+
+```
+
+#### (Optional) b. For feature extractiong using llm
+
+Note: The 'structured_output.json' file after extracting the features is already included in the repository. Running these scripts is optional unless updated data is required.
+
+````
+python attribute_extractor.py
+````
