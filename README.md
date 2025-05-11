@@ -107,3 +107,13 @@ Note: The 'structured_output.json' file after extracting the features is already
 ````
 python attribute_extractor.py
 ````
+
+---
+
+## Snapshots of the extracted features ('structured_output.json')
+
+
+![Image](https://github.com/user-attachments/assets/ae0a6bb4-44a6-45e0-b2b3-3bcf27d6dba0)
+
+
+![Image](https://github.com/user-attachments/assets/9a535dc0-205f-4fe8-9e62-13959d7ce27d)
