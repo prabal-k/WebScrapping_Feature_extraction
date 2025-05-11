@@ -10,7 +10,6 @@ driver = webdriver.Chrome()
 driver.get('https://vaperanger.com/')
 time.sleep(5)
 
-
 #Step-1: Id of the search bar and search the item
 search_bar = driver.find_element(By.ID,'quick_search_form')  
 search_bar.clear()
@@ -222,9 +221,7 @@ df = pd.DataFrame({
     'table_data_list':table_data_list
 })
 
-
 import re
-
 
 # Conver the unstructured table data into structured format
 def parse_table_data(table_data_entry):
